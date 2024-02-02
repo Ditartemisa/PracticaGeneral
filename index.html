@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/cssIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Nabla&family=Single+Day&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+
+header {
+    width: 100%;
+    height: 100%;
+} 
+article {
+            margin-top: 40px;
+            position: relative;
+            width: 250px;
+            transition: all .3s ease;
+           
+        }
+        article img:first-child{
+            box-shadow:  0 60px 60px -60px violet;
+            border-radius: 4px;
+            object-fit: cover;
+            width: 100%;
+            height: 400px;
+        }
+        article img:last-child{
+            position:absolute;
+            width: 200px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transform: translateY(25%);
+            transition: .3s ease;
+            opacity: 0;
+            
+        }
+        article:hover{
+            transform: perspective(250px)
+            rotateX(10deg);
+        }
+        article::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5)50% rgba(0, 0, 0)95%) ;
+            opacity: 0;
+            transition: all .3s ease;  
+        }
+        article:hover::before{
+            opacity: 1;
+        }
+        article:hover img:last-child{
+            opacity: 1;
+            transform: translateY(10%);
+        }
+        /*Centrado de div*/
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        section{
+            display: flex;
+            width: 600px;
+            height: 430px;
+        }
+        section img{
+            width: 0px;
+            flex-grow: 1;
+            object-fit: cover;
+            opacity: .8;
+            transition: .5s ease;
+        }
+        section img:hover{
+            cursor: crosshair;
+            width: 300px;
+            opacity: 1;
+            filter: contrast(120%);
+        }
+        /*Teléfono*/
+        .grid-container{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin: 20px;
+            justify-content: center;
+            align-items:center ;
+            padding: 20px;
+        }
+        .grid-container{
+            display: grid;
+            gap:10px;
+            grid-template-areas: auto;
+
+        }
+
+        /*Tablet*/
+
+        @media(min-width:768px) {
+            .grid-container{
+                grid-template-columns:auto;
+                 grid-template-areas auto;
+            }
+
+        }
+        /*para escritorio*/
+        @media (min-width:900px)
+        {
+            .grid-container{
+                grid-template-columns: auto;
+                grid-template-areas auto auto auto; 
+            }
+        }
+    </style>
+</head>
+  <body class="grid-container">
+    <header class="header"> <h1 class="Encabezado" style="padding: 10px;">Práctica General</h1></header>
+   
+
+    <nav class="navbar">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Cinemax</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Estrenos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active"  aria-current="page" href="./formulario.html">Ingreso</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" style="border-color: blue; color: blue;" type="submit" >Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <h3 class="subtitle" style="padding: 20px;">Estrenos</h3>
+            <div class="container">
+                <article>
+                    <img src="https://pbs.twimg.com/media/E3IttWCXoAYM8rX.jpg" alt="">
+                    <img src="https://eltallerdehector.com/wp-content/uploads/2022/06/f470c-personajes-de-luca-pelicula-png.png" alt="luca">
+                    
+                </article>
+                </div>
+                <div class="container">
+                    <article>
+                        <img src="https://es.web.img3.acsta.net/medias/nmedia/18/89/76/03/20065463.jpg" alt="">
+                        <img src="https://stickerly.pstatic.net/sticker_pack/ewgbkRk8Hz46agUHBK7Cbg/AWHIW0/3/ff6194e0-fa3a-4a88-8523-a194b16d201b.png" alt="luca">
+                        
+                    </article>
+                    </div>
+               
+
+          </div>
+          <div class="col">
+            <h3 class="subtitle" style="padding: 20px;">Películas</h3>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://img.unocero.com/2014/01/all-disney-movie-posters-40.jpg" alt="1" width="350" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://pics.filmaffinity.com/Caomo_sobrevivir_soltero_Serie_de_TV-766794711-large.jpg" alt="3" width="350" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://img.unocero.com/2014/01/all-disney-movie-posters-33.jpg" alt="4" width="350" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://i.pinimg.com/originals/33/5a/5d/335a5dbc3370872d82b2e4d769deea1e.jpg" alt="5" width="350" height="500">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+          <div class="col" style="position: relative;">
+            
+            <h3 class="subtitle" style="padding: 20px;">Promociones</h3>
+            <br><br><br>
+            <div class="alert alert-success" role="alert" style="background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: aliceblue;">
+                <h4 class="alert-heading">Promociones</h4>
+                <p>Por la compra de dos boletos quedarás participando en la rifa de un coche. </p>
+                <hr>
+                <p class="mb-0">Por la compra de 2 combo 2 podrás pedir un chocolate </p>
+              </div>
+            </div>
+            <br><br><br><br><br>
+
+            <h2 class="subtitle" style="align-content: center; padding: 20px">Combos</h2>
+            <br><br><br>
+            <div class="card-group">
+                
+                <div class="card">
+                  <img src="https://icee.mx/wp-content/uploads/ICEE-BEBIDAS-1.png" class="card-img-top" alt="Icee">
+                  <div class="card-body">
+                    <h5 class="card-title">Combo 1</h5>
+                    <p class="card-text">Palomitas grandes + 2 Icees</p>
+                    <p class="card-text"><small class="text-body-secondary">$200</small></p>
+                    <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://static.vecteezy.com/system/resources/previews/024/508/747/original/nachos-isolated-on-background-with-generative-ai-png.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Combo 2</h5>
+                    <p class="card-text">Nachos + 1 bebida.</p>
+                    <p class="card-text"><small class="text-body-secondary">$150</small></p>
+                    <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://assets.stickpng.com/thumbs/580b57fbd9996e24bc43c0d0.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Combo 3</h5>
+                    <p class="card-text">Palomitas grandes + 2 bebidas + 1 chocolate</p>
+                    <p class="card-text"><small class="text-body-secondary">$280</small></p>
+                    <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
+    
+
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

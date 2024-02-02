@@ -1,0 +1,17 @@
+.header{
+   background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+color: aliceblue;
+}
+
+.Encabezado{
+    font-family: 'Lexend', sans-serif;
+    font-family: 'Nabla', system-ui;
+    font-family: 'Single Day', cursive;
+    font-family: 'Sixtyfour', sans-serif;
+
+}
+
+.subtitle{
+    font-family: 'Space Mono', monospace;
+}
